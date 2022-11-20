@@ -3,14 +3,15 @@ int N;
 int i;
 string line;
 
-N = 21;
+N = 2;
 i = 2;
 line = "";
 
-while(i <= N)
+while(i <= N - 2)
 {
-    line = line + i.ToString() + " ";
+    line = line + i.ToString() + ", ";
     i = i + 2;
 }
 
+line = line + i.ToString();
 Console.WriteLine(line);
