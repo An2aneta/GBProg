@@ -15,10 +15,11 @@ int[] ArrayMaker(int value)
     //int tempNumber = 0;
     int tempValue = value;
     
-        for(int i = 1; i < 5; i++)
+        for(int i = 1; i <= 5; i++)
         {
             int tempNumber = (tempValue / Convert.ToInt32((Math.Pow(10, length-i))));
-            array[i] = tempNumber;
+            array[i-1] = tempNumber;
+            Console.WriteLine(array[i-1]);
             tempValue = tempValue - (tempNumber * Convert.ToInt32(Math.Pow(10, length-i)));
    
         }
@@ -31,13 +32,11 @@ int Palindrom(int[] array)
 {
    
    int flag = 0;
+   int i = 0;
 
-   
-    for(int i = 0; i < 1; i++)
+    while (i < 2)
     {
-        for(int j = 4; j > 3; j--)
-        {
-            if (array[i] == array[j])
+            if (array[i] == array[4-i])
             {
                 flag = 1;
             } 
@@ -45,13 +44,14 @@ int Palindrom(int[] array)
             {
                 flag = 0;
             }
-        }
+        i++;
     }
 return flag;
 }
 
 int number = GetNumber("Введите пятизначное число: ");
 int[] arrayWork = ArrayMaker(number);
+
 int isItPal = Palindrom(arrayWork);
 if (isItPal==1) Console.WriteLine("Palindrom");
 else  Console.WriteLine("Not Palindrom");
