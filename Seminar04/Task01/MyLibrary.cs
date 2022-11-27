@@ -144,7 +144,7 @@ public static int[] MultElementOdd(int[] col)
           resArray[j] = col[i] * col[(size-1)-i];
           j = j+1;
         }
-        resArray[j+1] = col[i+1]*col[i+1];
+        resArray[c-1] = col[i]*col[i];
    return resArray;
   
   }

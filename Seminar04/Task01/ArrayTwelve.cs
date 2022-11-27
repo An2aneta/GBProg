@@ -77,18 +77,19 @@ Console.WriteLine(CountElement(array4));
 // Задача 5: Найдите произведение пар чисел в одномерном массиве.Парой считаем первый и последний элемент, второй и предпоследний и т.д.Результат запишите в новом массиве.
 // * Для нечетного количество центральный элемент возводится в квадрат
 
-int[] array4 = CreateArray(10);
-Fill(array4, 0, 10);
+int[] array4 = CreateArray(11);
+Fill(array4, 1, 11);
 Console.WriteLine(PrintGood(array4));
 int sizeArray = array4.Length/2;
 if (sizeArray % 2 ==0)
 {
     int[] array5 = MultElementEven(array4);
+    Console.WriteLine(PrintGood(array5));
 }
 else
 {
     int[] array5 = MultElementOdd(array4);
+    Console.WriteLine(PrintGood(array5));
 }
 
 
-Console.WriteLine(PrintGood(array5));
