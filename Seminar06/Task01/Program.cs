@@ -93,13 +93,13 @@ string PrintGood(int[] numbers)
     {
         int t = resArr[i];
         if (t == 0) continue;
-        if (t < 0) {output += " - "; }
-        else if (i != 0) {output += " - "; }
+        if (t != 0 && i == 0) {output += $"{t}"; }
+        if (t == 1 && i == 1) {output += $" + x"; }
+        if (t != 1 && i == 1 && i != 0 && t>0) {output += $" + {t}x"; }
+        if (t == 1 && i != 1 && i != 0) {output += $" + x^{i}"; }
+        if (t != 1 && i != 1 && t !=0 && t > 0 && i !=0) {output += $" + {t}x^{i}"; }
+        if (t != 1 && i != 1 && t !=0 && t < 0 && i !=0) {output += $"{t}x^{i}"; }
 
-        if (t < 0) t = -t;
-        if (i == 1) {output += $"{t}x"; }
-        if (i == 0) {output += $"{t}"; }
-        if (i != 1 && i != 0 && t != 0) {output += $"{t}x^{i}"; }
     }
         return output;
   }
@@ -128,9 +128,18 @@ string PrintGood(int[] numbers)
   Console.WriteLine(PrintGood(secondArray));
   Console.WriteLine(PrintGood(sumArray));
   Console.WriteLine();
-  Console.WriteLine(PrintGood(subArray));
-
+ // Console.WriteLine(PrintGood(subArray));
+  
+  Console.WriteLine(Printres(firstArray));
+ 
+  Console.WriteLine(Printres(secondArray));
+  Console.WriteLine("Сумма многочленов равна ");
   Console.WriteLine(Printres(sumArray));
+
+ 
+  
+  Console.WriteLine("Разность многочленов равна ");
+  Console.WriteLine(Printres(subArray));
   
 
 
