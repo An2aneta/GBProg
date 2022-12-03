@@ -124,8 +124,8 @@ string Printres(int[] resArr)
         return output;
   }
 
-
-/* int[,] tr = CreateTriangle(10);
+/*
+int[,] tr = CreateTriangle(10);
 PrintTriangle(tr);
 int[] koeff = GetKoeff(tr, 8);
 
@@ -133,6 +133,7 @@ System.Console.WriteLine(String.Join(' ', koeff));
 
 Console.WriteLine(Printres(koeff));
 */
+
 
 
 double[,] tr = CreateTriangleDouble(125);
