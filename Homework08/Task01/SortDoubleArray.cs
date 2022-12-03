@@ -30,10 +30,8 @@ void FillTwoDimArray(int[,] array, int min, int max)
 
 int[,]  SortMaxMinArray(int[,] array)
 {
-    //int max = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
-       // int temp = array[i,0];
         for (int j = 0; j < array.GetLength(1)-1; j++)
         {
             for (int k = j+1; k < array.GetLength(1); k++)
