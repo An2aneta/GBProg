@@ -5,12 +5,16 @@
 
 int SumEl(int m, int n)
 {
-    int sum = n;
-    if(m != n)
+    if(n >= m)
     {
-        sum = sum + SumEl(m, n - 1);
-    }
-    return sum;
+        if(m==n) return 0;
+        if(n - m == 1) return m+n;
+        if(n - m >= 0)
+        {
+            return n + SumEl(m, n - 1);
+        }
+     }
+    return 0;
 }
 
-Console.WriteLine(SumEl(2, 8));
+Console.WriteLine(SumEl(6, 8));
